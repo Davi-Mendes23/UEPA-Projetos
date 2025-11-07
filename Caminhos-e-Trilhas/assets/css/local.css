@@ -1,0 +1,55 @@
+section.apresentacao__local {
+    display: flex;
+    flex-direction: column;
+}
+
+section.apresentacao__local .titulo {
+    position: relative;
+    height: 100px;
+    padding-left: 50px;
+    margin-left: 60px;
+}
+
+section.apresentacao__local .titulo h2, 
+section.apresentacao__local .titulo p.titulo__fundo {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+section.apresentacao__local .titulo h2 {
+    font-size: 40pt;
+}
+
+section.apresentacao__local .titulo p.titulo__fundo {
+    opacity: 0.1;
+    font-size: 100pt;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0;
+}
+
+section.apresentacao__local iframe {
+    width: 80vw; height: 90vh;
+    border-radius: 10px;
+    margin: auto;
+}
+
+@media (max-width: 750px) {
+    section.apresentacao__local {
+        margin: 0;
+    }
+    section.apresentacao__local .titulo {
+        padding-left: 30px;
+        margin-left: 0;
+    }
+    section.apresentacao__local .titulo h2 {
+        font-size: 30pt;
+    }
+    section.apresentacao__local .titulo p.titulo__fundo {
+        font-size: 50pt;
+    }
+    section.apresentacao__local iframe {
+        width: 90%; height: 50vh;
+        border-radius: 10px;
+    }
+}

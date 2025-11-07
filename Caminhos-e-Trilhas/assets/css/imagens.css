@@ -1,0 +1,254 @@
+section.imagens {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 200px 0;
+}
+
+/* configurando o titulo da section */
+section.imagens .titulo {
+    margin-bottom: -40px;
+    position: relative;
+    height: 100px;
+    padding-left: 50px;
+    margin-left: 60px;
+}
+
+section.imagens .titulo h2, 
+section.imagens .titulo p.titulo__fundo {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+section.imagens .titulo h2 {
+    font-size: 40pt;
+}
+
+section.imagens .titulo p.titulo__fundo {
+    opacity: 0.1;
+    font-size: 100pt;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0;
+}
+
+section.imagens .carrossel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    padding: 40px 0;
+    padding-left: 170px;
+    gap: 1vw;
+}
+
+@media (max-width:720px) {
+    section.imagens .carrossel {
+        gap: 70px;
+    }
+}
+
+section.imagens .carrossel .content_item {
+    width: 70vw; height: 55vh;
+    display: flex;
+    gap: 40px;
+    transition: 1.5s ease;
+    position: relative;
+}
+
+section.imagens .carrossel .content_item .img {
+    width: 40vw; height: 55vh;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(67, 235, 67, 0.23);
+}
+
+
+/* imagens davi */
+section.imagens .carrossel .content_item.index .img.img01.davi {
+    background: url("../images/davi/Imagem1.jpg") center;
+}
+
+section.imagens .carrossel .content_item.index .img.img02.davi {
+    background: url("../images/davi/Imagem2.jpg") center;
+}
+
+section.imagens .carrossel .content_item.ponto .img.img01.davi {
+    background: url("../images/davi/Imagem3.jpg") center;
+}
+
+section.imagens .carrossel .content_item.ponto .img.img02.davi {
+    background: url("../images/davi/Imagem4.jpg") center;
+}
+
+section.imagens .carrossel .content_item.ponto .img.img03.davi {
+    background: url("../images/davi/Imagem5.jpg") center;
+}
+
+section.imagens .carrossel .content_item.ponto .img.img04.davi {
+    background: url("../images/davi/Imagem6.jpg") center;
+}
+
+section.imagens .carrossel .content_item.ponto .img.img05.davi {
+    background: url("../images/davi/OIP.jpeg") center;
+}
+
+section.imagens .carrossel .content_item.ponto .img.img06.davi {
+    background: url("../images/davi/garimpo-pedras-imagem.jpg") center;
+}
+
+
+
+/* imagens fabi */
+section.imagens .carrossel .content_item .img.img01.fabi {
+    background: url("../images/fabi/maria4.jpg") center;
+}
+
+section.imagens .carrossel .content_item .img.img02.fabi {
+    background: url("../images/fabi/maria1.jpg") center;
+}
+
+section.imagens .carrossel .content_item .img.img03.fabi {
+    background: url("../images/fabi/maria3.jpg") center;
+}
+
+
+
+/* imagens monica */
+section.imagens .carrossel .content_item .img.img01.monica {
+    background: url("../images/monica/img_3.jpg") center;
+}
+
+section.imagens .carrossel .content_item .img.img02.monica {
+    background: url("../images/monica/img_4.jpg") center;
+}
+
+section.imagens .carrossel .content_item .img.img03.monica {
+    background: url("../images/monica/img_5.jpg") center;
+}
+
+
+
+/* imagens mariana */
+section.imagens .carrossel .content_item .img.img01.mariana {
+    background: url("../images/mariana/aguas_claras.png") center;
+}
+
+section.imagens .carrossel .content_item .img.img02.mariana {
+    background: url("../images/mariana/flor_de_carajas.jpg") center;
+}
+
+section.imagens .carrossel .content_item .img.img03.mariana {
+    background: url("../images/mariana/mirante_da_mina_de_ferro.png") center;
+}
+
+section.imagens .carrossel .content_item .img.img04.mariana {
+    background: url("../images/mariana/mirante_flor_de_carajas.png") center;
+}
+
+section.imagens .carrossel .content_item .img.img05.mariana {
+    background: url("../images/mariana/mirante_vale_do_rio_azul.png") center;
+}
+
+section.imagens .carrossel .content_item .img.img06.mariana {
+    background: url("../images/mariana/trilha_lagoa_da_mata.png") center;
+}
+
+
+
+section.imagens .carrossel .content_item .description {
+    width: 30vw; height: 55vh;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+section.imagens .carrossel .content_item .description p {
+    font-size: 9pt;
+}
+
+section.imagens .carrossel .content_item .description .button {
+    font-size: 10pt;
+    background-color: rgba(67, 235, 67, 0.616);
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: .3s;
+    box-shadow: 0 0 20px rgba(67, 235, 67, 0.322);
+}
+
+@media (min-width: 700px) {
+    section.imagens .carrossel .content_item .description .button:hover {
+        border-radius: 7pt;
+        opacity: .8;
+    }
+}
+
+
+section.imagens .img_dots {
+    display: flex;
+    gap: 10px;
+    margin-left: 170px;
+}
+
+section.imagens .img_dots span {
+    font-size: 30pt;
+    color: rgba(67, 235, 67, 0.616);
+    cursor: pointer;
+    transition: .3s;
+}
+
+@media (min-width: 700px) {
+    section.imagens .img_dots span:hover {
+        color: rgba(67, 235, 67, 0.4);
+    }
+}
+
+section.imagens .img_dots span.deactivated {
+    color: rgba(67, 235, 67, 0.145);
+}
+
+@media (max-width: 750px) {
+    section.imagens {
+        margin: 0;
+    }
+    section.imagens .titulo {
+        padding-left: 30px;
+        margin-left: 0;
+    }
+    section.imagens .titulo h2 {
+        font-size: 30pt;
+    }
+    section.imagens .titulo p.titulo__fundo {
+        font-size: 50pt;
+    }
+
+    section.imagens .carrossel {
+        overflow-x: hidden;
+        padding: 40px 15vw;
+        gap: 1vw;
+    }
+
+    section.imagens .carrossel .content_item {
+        width: 100%; height: auto;
+        transition: 1s ease;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section.imagens .carrossel .content_item .img {
+        width: 70vw; height: 30vh;
+    }
+
+    section.imagens .carrossel .content_item .description {
+        width: 100%; height: auto;
+        padding: 0;
+        gap: 15px;
+    }
+
+    section.imagens .img_dots {
+        margin: 0;
+        justify-content: center;
+    }
+}

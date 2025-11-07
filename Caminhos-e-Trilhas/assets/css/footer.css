@@ -1,0 +1,144 @@
+:root {
+    --bgColor: #055f56;
+    --shadowColor: #055f567c;
+}
+
+
+footer {
+    position: relative;
+    margin: 30px;
+    padding: 20px;
+}
+
+footer .bg_content {
+    position: absolute;
+    width: 100%; height: 80px;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px 10px 40px 40px;
+    background-color: var(--bgColor);
+    z-index: -1;
+    box-shadow: 0 0 30px var(--shadowColor);
+}
+
+footer .fundo__cinza {
+    background-color: #2D2D2D;
+    border-radius: 20px;
+    padding: 20px;
+    
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 70px 100px 100px;
+}
+
+footer .fundo__cinza .titulo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 22pt;
+    
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+footer .fundo__cinza .titulo span {
+    font-family: "Abril fatface", serif;
+    color: var(--bgColor);
+}
+
+footer .fundo__cinza .menu ul {
+    list-style: none; 
+    font-size: 9pt;   
+}
+
+footer .fundo__cinza .menu .titulo__menu {
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    font-size: 9pt;
+}
+
+footer .fundo__cinza .menu ul li a {
+    transition: .3s;
+}
+
+footer .fundo__cinza .menu ul li a:hover {
+    color: var(--bgColor);
+}
+
+footer .fundo__cinza .menu.navegar__pagina {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+footer .fundo__cinza .menu.contatos {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+
+footer .fundo__cinza .menu.contatos li {
+    display: flex;
+    gap: 10px;
+}
+
+footer .fundo__cinza .menu.contatos li span {
+    color: var(--bgColor);
+    font-size: 15pt;
+}
+
+footer .fundo__cinza .menu.redes_sociais {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+footer .fundo__cinza .menu.redes_sociais svg {
+    width: 35px; height: 35px;
+    margin-left: -5px;
+}
+
+footer .footer_img {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 320px;
+}
+
+@media (max-width: 750px) {
+    footer {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 20px;
+    }
+    footer .bg_content {
+        border-radius: 0;
+    }
+    footer .fundo__cinza {
+        grid-template-columns: 120px 120px 100px;
+        grid-template-rows: 70px 120px 110px 100px;
+    }
+    footer .fundo__cinza .titulo {
+        font-size: 20pt;
+        grid-column-end: 3;
+    }
+    footer .fundo__cinza .menu.contatos {
+        grid-column-start: 1;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    footer .fundo__cinza .menu.redes_sociais {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+    }
+    footer .footer_img {
+        display: none;
+    }
+}

@@ -1,0 +1,177 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+
+
+section.mais__visitados {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 200px 0;
+}
+
+/* configurando o titulo da section */
+section.mais__visitados .titulo {
+    position: relative;
+    height: 100px;
+    padding-left: 50px;
+    margin-left: 60px;
+    text-wrap: nowrap;
+}
+
+
+section.mais__visitados .titulo h2, 
+section.mais__visitados .titulo p.titulo__fundo {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+section.mais__visitados .titulo h2 {
+    font-size: 40pt;
+}
+
+
+section.mais__visitados .titulo p.titulo__fundo {
+    opacity: 0.1;
+    font-size: 100pt;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0;
+}
+
+section.mais__visitados a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; 
+} 
+
+section.mais__visitados .container {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+}
+
+
+section.mais__visitados .container input {
+    display: none;
+}
+
+section.mais__visitados .container label .text_and_img {
+    position: relative;
+    background-color: black;
+    border-radius: 10px;
+    width: 150px; height: 250px;
+    transition: .6s;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    overflow: hidden;
+}
+
+section.mais__visitados .container label .text_and_img h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 150px;
+    line-height: 130px;
+    margin: -10px;
+    color: #FFFFFF;
+    text-shadow: -5px 0px 20px #0e0e0e75;
+}
+
+section.mais__visitados .container label[for="card_1"] .text_and_img {
+    box-shadow: 0 0 30px 0 #02989d31;
+}
+
+section.mais__visitados .container label[for="card_2"] .text_and_img {
+    box-shadow: 0 0 30px 0 #d0344931;
+}
+
+section.mais__visitados .container label[for="card_3"] .text_and_img {
+    box-shadow: 0 0 30px 0 #08999431;
+}
+
+section.mais__visitados .container label[for="card_4"] .text_and_img {
+    box-shadow: 0 0 30px 0 #474d0031;
+}
+
+section.mais__visitados .container input:checked + label .text_and_img {
+    width: 400px;
+}
+
+section.mais__visitados .container p {
+    width: 100px;
+    opacity: 0;
+    text-align: end;
+    padding-top: 10px;
+    padding-right: 50px;
+    font-family: "Poppins", sans-serif;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    transition: .6s;
+}
+
+section.mais__visitados .container input:checked + label p {
+    opacity: 1;
+    width: 400px;
+    padding-right: 0;
+}
+
+section.mais__visitados .container label .text_and_img {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.mais__visitados .container label[for="card_1"] .text_and_img {
+    background: url("../images/davi/Imagem1.jpg") center center;
+}
+
+section.mais__visitados .container label[for="card_2"] .text_and_img {
+    background: url("../images/monica/img_3.jpg") center;
+}
+
+section.mais__visitados .container label[for="card_3"] .text_and_img {
+    background: url("../images/fabi/maria4.jpg") center;
+}
+
+section.mais__visitados .container label[for="card_4"] .text_and_img {
+    background: url("../images/mariana/aguas_claras.png") center;
+}
+
+@media (max-width: 750px) {
+    section.mais__visitados .titulo {
+        padding-left: 30px;
+        margin-left: 0;
+    }
+    section.mais__visitados .titulo h2 {
+        font-size: 30pt;
+    }
+    section.mais__visitados .titulo p.titulo__fundo {
+        font-size: 50pt;
+    }
+    section.mais__visitados .container {
+        flex-direction: column;
+    }
+    section.mais__visitados .container label .text_and_img {
+        border-radius: 10px;
+        width: 85%; height: 220px;
+        margin: 0 auto;
+    }
+    section.mais__visitados .container input:checked + label .text_and_img {
+        border-radius: 10px;
+        width: 85%; height: 220px;
+        margin: 0 auto;
+    }
+    section.mais__visitados .container p {
+        width: 85%;
+        opacity: 1;
+        padding-right: 0;
+        margin: 0 auto;
+    }
+    section.mais__visitados .container input:checked + label p {
+        width: 85%;
+        opacity: 1;
+        padding-right: 0;
+        margin: 0 auto;
+    }
+}

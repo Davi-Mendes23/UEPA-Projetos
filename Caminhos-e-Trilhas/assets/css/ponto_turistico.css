@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #D3D3D3;
+}
+
+html {
+    background-color: #0E0E0E;
+}
+
+section {
+    width: 100%;
+    min-height: 95vh;
+}
+
+
+
+
+
+/*//// SECTION APRESENTACAO ////*/
+section.apresentacao {
+    /* alinhar texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* imagem no fundo */
+    position: relative;
+}
+
+    
+section.apresentacao h1 {
+    font-family: "Bebas Neue", sans-serif;
+    z-index: 10;
+    color: #ffffff;
+    font-size: 70pt;
+}
+    
+section.apresentacao .bg_img {
+    width: 100%; height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background: url("../images/img01.jpg") center;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .9;
+}
+
+section.apresentacao .gradient {
+    /* background: linear-gradient(transparent, #0E0E0E); */
+    background: linear-gradient(transparent 0%, #0E0E0E 95%);
+    width: 100%; height: 100%;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+
+/*//// SECTION APRESENTACAO__DESCRICAO ////*/
+section.apresentacao__descricao {
+    padding: 100px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative; /* a imagem vai ter essa section como referencia*/
+
+    overflow: hidden; /* esconder oq sair da section */
+    margin: 100px 0;
+}
+
+section.apresentacao__descricao p {
+    z-index: 1;
+    width: 55%;
+}
+
+section.apresentacao__descricao .background {
+    width: 100vw; height: 100vh;
+    position: absolute;
+    right: -300px;
+    z-index: 0;
+    background: url("../images/img01.jpg") center center;
+    background-size: cover;
+    opacity: .7;
+}
+
+section.apresentacao__descricao .background .gradient {
+    width: 100%; height: 100%;
+    background: linear-gradient(#0E0E0E 0%, transparent 50%, #0E0E0E 100%),
+                linear-gradient(90deg, #0E0E0E 0%, transparent 50%);
+}
+
+
+
+
+/*//// SECTION IMAGENS ////*/
+section.imagens {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 200px 0;
+}
+
+section.imagens .titulo {
+    position: relative;
+    height: 100px;
+    padding-left: 50px;
+    margin-left: 60px;
+}
+
+section.imagens .titulo h2, 
+section.imagens .titulo p.titulo__fundo {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+section.imagens .titulo h2 {
+    font-size: 40pt;
+}
+
+section.imagens .titulo p.titulo__fundo {
+    opacity: 0.1;
+    font-size: 100pt;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0;
+}
+
+section.imagens .carrossel .linha__imagens {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding-left: 200px;
+    overflow: hidden;
+    float: right;
+}
+
+section.imagens .carrossel .linha__imagens img {
+    width: 300px; height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+section.imagens .imagem__canto {
+    width: auto; height: 250px;
+    position: absolute;
+    left: 0;
+    top: 200px;
+    filter: blur(5px);
+    transition: .3s;
+}
+
+@media (max-width: 750px) {
+    section.apresentacao h1 {
+        font-size: 30pt;
+    }
+    section.apresentacao__descricao {
+        padding: 40px;
+        margin: 0;
+    }
+    
+    section.apresentacao__descricao p {
+        z-index: 1;
+        width: 100%;
+        font-size: 10pt;
+    }
+    section.apresentacao__descricao .background,
+    section.apresentacao__descricao .background .gradient {
+        display: none;
+    }
+}
